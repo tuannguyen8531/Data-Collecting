@@ -83,6 +83,7 @@ def main():
     urls = add_rating_filler(movie_urls)
     all_ratings, all_texts = crawl_data(urls)
     to_tsv(index, all_ratings, all_texts)
+    print("Done!")
 
 if __name__ == "__main__":
     main()
