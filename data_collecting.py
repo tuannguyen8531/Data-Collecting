@@ -73,7 +73,7 @@ def to_tsv(index, all_ratings, all_texts):
     all_texts_processed = [text.replace("\n", " ") for text in all_texts]
 
     with open(tsv_file, "w", encoding="utf-8") as file:
-        file.write("Review\tSentiment\n")
+        file.write("sentiment\treview\n")
         for rating, text in zip(all_ratings, all_texts_processed):
             file.write(f"{int(rating)}\t{str(text)}\n")
 
